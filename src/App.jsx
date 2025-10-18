@@ -193,10 +193,14 @@ function App() {
 
   let win = false;
   let lose = false;
+  let count = 0;
   if (word.every((letter) => letter.isShown)) {
     win = true;
   }
-  if (languages.every((lang) => lang.isDead)) {
+  languages.forEach(lang => {
+    if(lang.isDead) return count++
+  });
+  if(count === 8){
     lose = true;
   }
 
@@ -315,7 +319,7 @@ function App() {
             </div>
           ) : lose ? (
             <div className={`notice`} style={{ backgroundColor: "red" }}>
-              you Are such a Looser and dumb!
+              Sorry you Lose! Better to start learning Assembly
             </div>
           ) : (
             <div className={`notice ${!deadlanguage ? "nonotice" : ""}`}>
