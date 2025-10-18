@@ -1,0 +1,141 @@
+main{
+  background-color: rgba(40, 39, 38, 1);
+  height: 100vh;
+  padding: 50px 30px;
+  display: grid;
+  place-items: center;
+}
+main .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .text{
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .container .text h3{
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(249, 244, 218, 1);
+  
+}
+main .container .text p{
+  font-size: 1rem;
+  color: rgba(142, 142, 142, 1);
+  
+}
+main .container .notice{
+  height: 50px;
+  width: fit-content;
+  padding: 5px 20px;
+  background-color:blue;
+  color: rgba(249, 244, 218, 1);
+  font-style: italic;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+main .container .nonotice{
+  visibility: hidden;
+}
+main .container .eleminations{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    gap: 3px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+main .container .eleminations span{
+  padding: 5px;
+  background-color: yellow;
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  font-family: "Hanken Grotesk";
+  font-size: 16px;
+  font-weight: 500;
+}
+main .container .eleminations span.isdead::before{
+     content: "💀";
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     display: grid;
+     place-items: center;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.527);
+}
+
+main .container .word-container{
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  gap: 2px;
+  margin-bottom: 20px;
+  
+}
+main .container .word-container .letter{
+  aspect-ratio: 1 / 1;
+  height: 50px;
+  padding: 5px;
+  color: rgba(249, 244, 218, 1) ;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  background-color: rgba(50, 50, 50, 1);
+  border-bottom: solid 1px rgba(249, 244, 218, 1);
+  text-transform: capitalize;
+  
+}
+
+main .container .keyboard{
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:5px;
+}
+main .container .keyboard button{
+  width: calc(10% - 5px);
+   aspect-ratio: 1 / 1; 
+   border: solid 1px rgba(215, 215, 215, 1);
+   border-radius: 4px;
+   font-family: "Hanken Grotesk";
+   font-weight: bold;
+   font-size: 18px;
+   text-transform: capitalize;
+   display: grid;
+   place-items: center;
+   cursor: pointer;
+   background-color: rgba(252, 186, 41, 1);
+}
+button.endgame-btn{
+  cursor: pointer;
+  background-color: rgb(41, 104, 252);
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-family: "Hanken Grotesk";
+}
+.text-white{
+  color:white;
+}
+.text-red{
+  color:red;
+}
